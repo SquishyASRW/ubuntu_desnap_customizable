@@ -5,7 +5,7 @@
 
 - [x] It Removes Snaps from Ubuntu
 - [x] it Installs Recommended Software That You Can Choose From (Optional)
-- [x] It Reindstalls Firefox Using apt
+- [x] It Reinstalls Firefox Using apt
 - [ ] It Has Graphical User Interface
 
 > Note: This Tool Will Be Regularly Updated And It Will Provide A Clean Experience For New Users Consider Contributing To This Project!
