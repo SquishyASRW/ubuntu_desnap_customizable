@@ -41,7 +41,7 @@ int installSoftware() {
         
         // get input again
         fgets(OptionalOther,sizeof(OptionalOther),stdin);
-        OptionalOther[strcspn(OptionalOther[0]);
+OptionalOther[strcspn(OptionalOther, "\n")] = 0;
             OptionalOther[0] = toupper(OptionalOther[0]);
             
             // instantly install all stuff
