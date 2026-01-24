@@ -8,7 +8,17 @@
 
 int installSoftware() {
     char Choice[30];
+    char OptionalOther[30];
     char Optional[30];
+    char Discord[30];
+    char Librewolf[30];
+    char KeepFox[30];
+    char Steam[30];
+    char Amberol[30];
+    char Wine[30];
+    char Bottles[30];
+    char Parabolic[30];
+    char Lutris[30];
     printf("Do You Wish To Install And Optimize Software Or [Q] to Quit Or [Y]: ");
     fgets(Choice,sizeof(Choice),stdin);
     Choice[strcspn(Choice, "\n")] = 0; 
@@ -20,12 +30,28 @@ int installSoftware() {
     
     else if (strcmp(Choice,"Y") == 0)
     {
-        printf("Installing Useful Software[Discord,Amberol,Parabolic,Bottles,Lutris,Wine,Steam]");
+        printf("Would you like to install all software or select manually? [A] for all [M] for manual selection.");
+        fgets(OptionalOther,sizeof(OptionalOther),stdin);
+        OptionalOther[strcspn(OptionalOther[0]);
+            OptionalOther[0] = toupper(OptionalOther[0]);
+            if strcmp(OptionalOther,"A") == 0)
+            {
+                printf("Installing Useful Software[Discord,Amberol,Parabolic,Bottles,Lutris,Wine,Steam]");
         sleep(1);
         system("snap disable firefox && snap remove --purge firefox");
         sleep(1);
+        system("sudo apt install firefox");
+        sleep(1);
         system("flatpak install com.discordapp.Discord -y && flatpak install flathub io.bassi.Amberol -y && flatpak install org.nickvision.tubeconverter -y && flatpak install com.usebottles.bottles -y && flatpak install flathub net.lutris.Lutris -y && sudo apt install wine -y && flatpak install com.valvesoftware.Steam -y && flatpak override --user --filesystem=/path/to/your/Steam/Library com.valvesoftware.Steam && flatpak install flathub io.gitlab.librewolf-community -y");
         sleep(1);
+        
+                }
+                
+                else if strcmp(OptionalOther,"M") == 0)
+                {
+                    
+            }
+            
         printf("Would You Like To Install The Optional Apps&Games[Luanti,VSCodium,Upscaler]: ");
         fgets(Optional,sizeof(Optional),stdin);
         Optional[strcspn(Optional, "\n")] = 0; 
