@@ -37,6 +37,13 @@ int installSoftware() {
     // remove snap stuff
     else if (strcmp(Choice,"Y") == 0)
     {
+        system("snap disable firefox && snap remove --purge firefox");
+        
+        sleep(1);
+        
+        system("sudo apt install firefox");
+sleep(1)
+        
         printf("Would you like to install all software or select manually? [A] for all [M] for manual selection.");
         
         // get input again
@@ -51,14 +58,6 @@ OptionalOther[strcspn(OptionalOther, "\n")] = 0;
         
         sleep(1);
         
-        system("snap disable firefox && snap remove --purge firefox");
-        
-        sleep(1);
-        
-        system("sudo apt install firefox");
-        
-        sleep(1);
-        
         system("flatpak install com.discordapp.Discord -y && flatpak install flathub io.bassi.Amberol -y && flatpak install org.nickvision.tubeconverter -y && flatpak install com.usebottles.bottles -y && flatpak install flathub net.lutris.Lutris -y && sudo apt install wine -y && flatpak install com.valvesoftware.Steam -y && flatpak override --user --filesystem=/path/to/your/Steam/Library com.valvesoftware.Steam && flatpak install flathub io.gitlab.librewolf-community -y");
         
         sleep(1);
@@ -68,7 +67,124 @@ OptionalOther[strcspn(OptionalOther, "\n")] = 0;
                 // if they chose MANUAL choice
                 else if (strcmp(OptionalOther,"M") == 0)
                 {
-                    
+                 printf("Would You Like To Install Discord? [Y/N]")
+                     
+                             fgets(Discord,sizeof(Discord),stdin);
+Discord[strcspn(Discord, "\n")] = 0;
+            Discord[0] = toupper(Discord[0]);
+            
+            // instantly install all stuff
+            if (strcmp(Discord,"Y") == 0)
+            {
+                system("flatpak install com.discordapp.Discord -y")
+            sleep(1)
+            }
+else if (strcmp(Discord,"N") == 0)
+{
+    print("Discord Not Installed.")
+}
+
+                    printf("Would You Like To Install Amberol? [Y/N]")         
+
+                                                     fgets(Discord,sizeof(Amberol),stdin);
+Amberol[strcspn(Amberol, "\n")] = 0;
+            Amberol[0] = toupper(Amberol[0]);
+            
+            // instantly install all stuff
+            if (strcmp(Amberol,"Y") == 0)
+            {
+                system("flatpak install flathub io.bassi.Amberol -y")
+            sleep(1)
+            }
+else if (strcmp(Amberol,"N") == 0)
+{
+    print("Amberol Not Installed.")
+}
+
+                                      printf("Would You Like To Install Parabolic? [Y/N]")         
+
+                                                     fgets(Parabolic,sizeof(),stdin);
+Parabolic[strcspn(Parabolic, "\n")] = 0;
+            Parabolic[0] = toupper(Parabolic[0]);
+            
+            // instantly install all stuff
+            if (strcmp(Parabolic,"Y") == 0)
+            {
+                system("flatpak install org.nickvision.tubeconverter -y")
+            sleep(1)
+            }
+else if (strcmp(Parabolic,"N") == 0)
+{
+    print("Parabolic Not Installed.")
+}  
+
+                                                          printf("Would You Like To Install Bottles? [Y/N]")         
+
+                                                     fgets(Bottles,sizeof(),stdin);
+Bottles[strcspn(Bottles, "\n")] = 0;
+            Bottles[0] = toupper(Bottles[0]);
+            
+            // instantly install all stuff    
+            if (strcmp(Bottles,"Y") == 0)
+            {
+                system("flatpak install com.usebottles.bottles -y")
+            sleep(1)
+            }
+else if (strcmp(Bottles,"N") == 0)
+{
+    print("Bottles Not Installed.")
+}  
+
+                                                                 printf("Would You Like To Install Lutris? [Y/N]")         
+
+                                                     fgets(Lutris,sizeof(),stdin);
+Lutris[strcspn(Lutris, "\n")] = 0;
+            Lutris[0] = toupper(Lutris[0]);
+            
+            // instantly install all stuff    
+            if (strcmp(Lutris,"Y") == 0)
+            {
+                system("flatpak install flathub net.lutris.Lutris -y")
+            sleep(1)
+            }
+else if (strcmp(Lutris,"N") == 0)
+{
+    print("Lutris Not Installed.")
+}           
+
+                                                                                     printf("Would You Like To Install Wine? [Y/N]")         
+
+                                                     fgets(Wine,sizeof(),stdin);
+Wine[strcspn(Wine, "\n")] = 0;
+            Wine[0] = toupper(Wine[0]);
+            
+            // instantly install all stuff    
+            if (strcmp(Wine,"Y") == 0)
+            {
+                system("sudo apt install wine")
+            sleep(1)
+            }
+else if (strcmp(Wine,"N") == 0)
+{
+    print("Wine Not Installed.")
+}    
+
+                                                                                                         printf("Would You Like To Install Steam? [Y/N]")         
+
+                                                     fgets(Steam,sizeof(),stdin);
+Steam[strcspn(Steam, "\n")] = 0;
+            Steam[0] = toupper(Steam[0]);
+            
+            // instantly install all stuff    
+            if (strcmp(Steam,"Y") == 0)
+            {
+                system("flatpak install com.valvesoftware.Steam -y && flatpak override --user --filesystem=/path/to/your/Steam/Library com.valvesoftware.Steam")
+            sleep(1)
+            }
+else if (strcmp(Steam,"N") == 0)
+{
+    print("Steam Not Installed.")
+}    
             }
             
         printf("Would You Like To Install The Optional Apps&Games[Luanti,VSCodium,Upscaler]: ");
