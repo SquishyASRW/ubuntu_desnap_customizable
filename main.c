@@ -4,7 +4,28 @@
 #include <stdlib.h>
 #include<unistd.h>
 
-
+char * InstallAppOfChoice(char commandneeded[], char showntext[]) {
+    char responsegiven[10];
+    printf("%s", showntext);
+        fgets(responsegiven,sizeof(responsegiven),stdin);
+    responsegiven[strcspn(responsegiven, "\n")] = 0; 
+    responsegiven[0] = toupper(responsegiven[0]);
+    
+    // if they chose no
+    if (strcmp(responsegiven,"Q") == 0)
+    {
+    return "Not Installed";
+    }
+    
+    // install stuff
+    else if (strcmp(responsegiven,"Y") == 0)
+        {
+    system(commandneeded);
+    return "Installed";
+    }
+    
+   return "What";
+    }
 
 int installSoftware() {
     // Choice data
