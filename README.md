@@ -1,4 +1,5 @@
 # **Ubuntu Desnapper Customizable Ver**
+# **This is discontinued!** I am working on a new recoded version.
 **This is a fork of thvret77's Ubuntu desnapper. I am learning C so I wanted to try this.**
 
 **This Tool Allows You To Remove The Snaps And Install Suggested Software With Little To No Effort**
