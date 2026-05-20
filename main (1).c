@@ -20,7 +20,7 @@ int installSoftware() {
     char Parabolic[30];
     char Lutris[30];
     
-    printf("Do You Wish To Install And Optimize Software Or [Q] to Quit Or [Y]: ");
+    printf("Do You Wish To Install And Optimize Software [Y] Or Quit [Q]: ");
     
     // Get input
     fgets(Choice,sizeof(Choice),stdin);
@@ -85,7 +85,7 @@ else if (strcmp(Discord,"N") == 0)
 
                     printf("Would You Like To Install Amberol? [Y/N]")  ;       
 
-                                                     fgets(Discord,sizeof(Amberol),stdin);
+                                                     fgets(Amberol,sizeof(Amberol),stdin);
 Amberol[strcspn(Amberol, "\n")] = 0;
             Amberol[0] = toupper(Amberol[0]);
             
